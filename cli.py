@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-"""
-Binance Futures Testnet Trading Bot
-CLI entry point
-"""
 
 import argparse
 import os
@@ -72,14 +67,13 @@ def main():
 
     api_key, api_secret = load_credentials()
 
-    # Init client
     try:
         client = BinanceClient(api_key=api_key, api_secret=api_secret)
     except BinanceClientError as e:
         print(f"\n  ❌ Client init error: {e}\n")
         sys.exit(1)
 
-    # Ping testnet
+ 
     print("\n  🔗 Connecting to Binance Futures Testnet...")
     if not client.ping():
         print("  ⚠️  Warning: Testnet ping failed. Proceeding anyway...\n")
@@ -88,7 +82,7 @@ def main():
         print("  ✅ Connected successfully.\n")
         logger.info("Testnet ping successful.")
 
-    # Place order
+
     place_order(
         client=client,
         symbol=args.symbol,
