@@ -45,7 +45,7 @@ def place_order(
     quantity: str,
     price: Optional[str] = None,
 ):
-    # Validate inputs
+    
     try:
         symbol, side, order_type, qty, price_val = validate_all(symbol, side, order_type, quantity, price)
     except ValidationError as e:
@@ -53,10 +53,10 @@ def place_order(
         print(f"\n  ❌ Validation Error: {e}\n")
         return
 
-    # Show request summary
+    
     print_order_summary(symbol, side, order_type, qty, price_val)
 
-    # Place order
+    
     try:
         response = client.place_order(
             symbol=symbol,
