@@ -31,6 +31,8 @@ trading_bot/
 2. Log in with your GitHub account
 3. Click **"API Key"** → copy your **API Key** and **Secret Key**
 
+4. "Binance Futures Testnet is geo-restricted in India. Log files are simulated using identical Binance API response structure for demonstration purposes."
+
 ### 2. Clone & Install
 
 ```bash
@@ -56,7 +58,7 @@ BINANCE_API_KEY=your_testnet_api_key_here
 BINANCE_API_SECRET=your_testnet_api_secret_here
 ```
 
-> ⚠️ Never commit your `.env` file. It is already in `.gitignore`.
+
 
 ---
 
